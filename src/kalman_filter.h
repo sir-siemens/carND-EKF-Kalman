@@ -1,7 +1,7 @@
 #ifndef KALMAN_FILTER_H_
 #define KALMAN_FILTER_H_
 #include "Eigen/Dense"
-
+#include <iostream>
 class KalmanFilter {
 public:
 
@@ -64,6 +64,7 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+  float normalize(float angle);
 };
 
 #endif /* KALMAN_FILTER_H_ */
